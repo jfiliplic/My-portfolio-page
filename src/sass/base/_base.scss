@@ -26,3 +26,7 @@ h1 {
   line-height: 1;
   font-size: 3.125rem;
 }
+
+h2 {
+  @include sans-serif($fs: 3rem);
+}
