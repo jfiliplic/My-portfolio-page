@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+
+.about-me {
+    @include container;
+    @include clearfix;
+    
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  
+  .about-img {
+    max-height: 25em;
+  }
+  
+  .about-title {
+    margin-bottom: .25em;  
+  }
+  
+  .about-subtitle {
+    margin: .5em 0;
+  }
