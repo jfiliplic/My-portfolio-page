@@ -7,9 +7,21 @@
 /**
  * Basic typography style
  */
- body {
-   font-family: $font-primary;
-   color: $color-grey-dark-1;
-   font-weight: 300;
-   line-height: 1.6;
- }
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Roboto:wght@400;700&family=Six+Caps&display=swap");
+
+$ff-serif: "Merriweather", serif;
+$ff-sserif: "Six Caps", sans-serif;
+
+$fw-normal: 400;
+$fw-bold: 900;
+
+@mixin sans-serif($fs, $ls: 0.3em, $color: $dark-gray, $lh: 1, $tt: uppercase) {
+  color: $color;
+  font-size: $fs;
+  letter-spacing: $ls;
+  line-height: $lh;
+  text-transform: $tt;
+  font-family: $ff-sserif;
+  font-weight: $fw-normal;
+}

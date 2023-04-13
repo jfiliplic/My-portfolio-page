@@ -1,27 +1,28 @@
 @use "../abstracts" as *;
+@use "./typography" as *;
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+body {
+  color: $gray;
+  font-family: $ff-serif;
+  line-height: 1.6;
+  background-color: $white;
+  font-size: 0.875rem;
+  overflow-x: hidden;
 }
 
-html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
+img {
+  max-width: 100%;
 }
 
-/**
- * Basic styles for links
- */
-a {
-    color: $color-primary;
-    text-decoration: none;
+h1,
+h2,
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
 
-    @include hover-focus-active {
-        color: $text-color;
-        text-decoration: underline;
-    }
+h1 {
+  color: $dark-blue;
+  line-height: 1;
+  font-size: 3.125rem;
 }
