@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.contact {
+  @include container;
+  padding: 5em 0;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-top: 1em;
+    color: $dark-gray;
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75em;
+    background-color: lighten($light-gray, 15%);
+    border: 1px solid $light-gray;
+    font-size: 1.2rem;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    background-color: $blue;
+    border: none;
+    margin-top: 1em;
+    margin-left: auto;
+    padding: 0.5em 8%;
+    text-indent: 0.3em;
+    @include sans-serif($fs: 2.5rem, $color: $white);
+  }
+}
