@@ -1,3 +1,23 @@
 //  --------------------------------------------------------------------------------
 //  Contains all style related to footer of the site/application
 //  --------------------------------------------------------------------------------
+@use "../abstracts" as *;
+@use "../base" as *;
+
+footer {
+    padding: 5em 0;
+    background-color: $dark-blue;
+    color: rgba($white, 0.7);
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content:space-evenly;
+    @include container ($max-width: 20em);
+    margin-top: 1.5em;
+
+    .social-icon {
+        width: 4em;
+    }
+}
