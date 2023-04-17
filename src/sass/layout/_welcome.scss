@@ -12,16 +12,22 @@
   height: 100vh;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: $fw-normal;
     color: $dark-blue;
     line-height: 2;
     text-align: center;
+    @include mq {
+      font-size: min(3vw, 2.15rem);
+    }
 
     span {
-      @include sans-serif($fs: 8rem, $color: $white);
+      @include sans-serif($fs: 5.5rem, $color: $white);
       display: block;
       text-indent: 0.3em;
+      @include mq {
+        font-size: min(11vw, 8rem);
+      }
     }
   }
 }
