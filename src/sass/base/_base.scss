@@ -8,6 +8,10 @@ body {
   background-color: $white;
   font-size: 0.875rem;
   overflow-x: hidden;
+
+  @include mq {
+    font-size: 1.125rem;
+  }
 }
 
 img {
@@ -25,8 +29,16 @@ h1 {
   color: $dark-blue;
   line-height: 1;
   font-size: 3.125rem;
+
+  @include mq {
+    font-size: 4.25rem;
+  }
 }
 
 h2 {
-  @include sans-serif($fs: 3rem);
+  @include sans-serif($fs: 2rem);
+
+  @include mq {
+    font-size: 3rem;
+  }
 }
