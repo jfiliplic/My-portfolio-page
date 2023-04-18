@@ -1,0 +1,95 @@
+//  --------------------------------------------------------------------------------
+//  Contains all style related to navigation of the site/application
+//  --------------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.menu-btn {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  // right: 3em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  // left: 20%;
+  // right: 0;
+  z-index: 99;
+
+  transform: translateX(-100%);
+  // transform: translateX(100%);
+  transition: transform ease-out 250ms;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: $blue;
+    list-style: none;
+  }
+}
+
+nav {
+  li,
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-indent: 0.3em;
+  }
+
+  li:not(:last-of-type) {
+    border-bottom: 1px solid $dark-blue;
+  }
+
+  li:hover {
+    background-color: rgba($dark-blue, 0.3);
+  }
+
+  a {
+    @include sans-serif($fs: 3rem);
+    color: $dark-blue;
+    text-decoration: none;
+  }
+}
+
+.close-icon {
+  display: none;
+}
+
+.nav-is-open {
+  overflow-y: hidden;
+
+  nav {
+    transform: translateX(0);
+  }
+
+  .welcome {
+    transform: translateX(80%);
+  }
+
+  .close-icon {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .menu-btn {
+    transform: translateX(-70%);
+  }
+}
