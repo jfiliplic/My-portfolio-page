@@ -6,13 +6,24 @@
 @use "../base" as *;
 
 .menu-btn {
-  position: absolute;
-  top: 3em;
-  left: 3em;
-  // right: 3em;
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  .close-icon,
+  .hamburger {
+    position: absolute;
+    top: 3em;
+  }
+
+  .close-icon {
+    display: none;
+    left: 3em;
+  }
+
+  .hamburger {
+    right: 3em;
+  }
 }
 
 nav {
@@ -21,12 +32,9 @@ nav {
   bottom: 0;
   left: 0;
   right: 20%;
-  // left: 20%;
-  // right: 0;
   z-index: 99;
 
   transform: translateX(-100%);
-  // transform: translateX(100%);
   transition: transform ease-out 250ms;
 
   ul {
@@ -35,7 +43,7 @@ nav {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: $blue;
+    background-color: $dark-blue;
     list-style: none;
   }
 }
@@ -52,22 +60,19 @@ nav {
   }
 
   li:not(:last-of-type) {
-    border-bottom: 1px solid $dark-blue;
+    border-bottom: 1px solid $white;
   }
 
   li:hover {
-    background-color: rgba($dark-blue, 0.3);
+    // background-color: rgba($dark-blue, 0.3);
+    background-color: $gray;
   }
 
   a {
     @include sans-serif($fs: 3rem);
-    color: $dark-blue;
+    color: $white;
     text-decoration: none;
   }
-}
-
-.close-icon {
-  display: none;
 }
 
 .nav-is-open {
@@ -87,9 +92,5 @@ nav {
 
   .hamburger {
     display: none;
-  }
-
-  .menu-btn {
-    transform: translateX(-70%);
   }
 }
