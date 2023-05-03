@@ -11,6 +11,8 @@
   align-items: center;
   height: 100vh;
 
+  transition: transform ease-out 250ms;
+
   h1 {
     font-size: 1.5rem;
     font-weight: $fw-normal;
