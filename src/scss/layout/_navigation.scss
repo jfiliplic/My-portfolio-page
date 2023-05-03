@@ -6,6 +6,7 @@
 @use "../base" as *;
 
 .menu-btn {
+  visibility: hidden;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -14,6 +15,7 @@
   .hamburger {
     position: absolute;
     top: 3em;
+    visibility: visible;
   }
 
   .close-icon {
@@ -64,7 +66,6 @@ nav {
   }
 
   li:hover {
-    // background-color: rgba($dark-blue, 0.3);
     background-color: $gray;
   }
 
