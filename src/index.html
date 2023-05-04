@@ -262,17 +262,17 @@
       </section>
       <section class="contact" id="contact">
         <h1>Contact me</h1>
-        <form>
+        <form name="send-msg">
           <label for="name" class="name"
-            >Name:<input type"text" id="name" class="name">
+            >Name:<input type="text" id="name" name="name" />
           </label>
 
           <label for="email" class="email"
-            >Email:<input type"email" id="email" class="email">
+            >Email:<input type="email" id="email" name="email" />
           </label>
 
           <label for="message" class="message"
-            >Message:<textarea id="message" class="message"></textarea>
+            >Message:<textarea id="message" name="message"></textarea>
           </label>
 
           <button type="submit" class="send-button">SEND</button>
@@ -303,3 +303,4 @@
 </html>
 <script src="js/navigation.js"></script>
 <script src="js/modal.js"></script>
+<script src="js/form.js"></script>
