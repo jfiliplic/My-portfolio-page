@@ -2,6 +2,7 @@ const targets = document.querySelectorAll(".button-target");
 const backToTopBtn = document.querySelector(".back-to-top-btn");
 
 function observerCallback(targets) {
+  console.log(targets);
   targets.forEach((target) => {
     if (target.isIntersecting) {
       backToTopBtn.classList.add("show-btn");
@@ -28,4 +29,3 @@ targets.forEach((target) => {
 });
 
 backToTopBtn.addEventListener("click", scrollToTop);
-
