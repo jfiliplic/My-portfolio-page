@@ -15,6 +15,7 @@ portfolioContainer.addEventListener("click", (event) => {
       modal.classList.add("is-open");
       modal.style.animation = "modalFadeIn 1s forwards";
       document.body.style.overflowY = "hidden";
+      backToTopBtn.classList.remove("show-btn");
     };
 
     modalOpen();
@@ -23,6 +24,7 @@ portfolioContainer.addEventListener("click", (event) => {
       modal.classList.remove("is-open");
       modal.removeEventListener("animationend", modalClose);
       document.body.style.overflowY = "scroll";
+      backToTopBtn.classList.add("show-btn");
     };
 
     closeButton.addEventListener("click", () => {

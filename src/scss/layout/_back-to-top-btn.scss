@@ -1,0 +1,30 @@
+.back-to-top-btn {
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  bottom: 30px;
+  right: 20px;
+  z-index: 99;
+  background-image: url("../assets/images/up-arrow.png");
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+  }
+}
+
+.show-btn {
+  opacity: 1;
+  cursor: pointer;
+}
