@@ -1,4 +1,5 @@
 const portfolioContainer = document.querySelector(".portfolio-items");
+const backToTop = document.querySelector(".back-to-top-btn");
 
 portfolioContainer.addEventListener("click", (event) => {
   event.preventDefault();
@@ -15,7 +16,7 @@ portfolioContainer.addEventListener("click", (event) => {
       modal.classList.add("is-open");
       modal.style.animation = "modalFadeIn 1s forwards";
       document.body.style.overflowY = "hidden";
-      backToTopBtn.classList.remove("show-btn");
+      backToTop.classList.remove("show-btn");
     };
 
     modalOpen();
@@ -24,7 +25,7 @@ portfolioContainer.addEventListener("click", (event) => {
       modal.classList.remove("is-open");
       modal.removeEventListener("animationend", modalClose);
       document.body.style.overflowY = "scroll";
-      backToTopBtn.classList.add("show-btn");
+      backToTop.classList.add("show-btn");
     };
 
     closeButton.addEventListener("click", () => {
