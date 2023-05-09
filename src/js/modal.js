@@ -1,12 +1,10 @@
-export async function initModal() {
-  const portfolioContainer = document.querySelector(".portfolio-items");
-  const backToTop = document.querySelector(".back-to-top-btn");
+import { backToTopBtn, portfolioContainer } from "./elements";
 
+export async function initModal() {
   portfolioContainer.addEventListener("click", (event) => {
     event.preventDefault();
 
     const modalLinkClick = event.target.closest(".portfolio-link");
-    console.log(modalLinkClick);
 
     if (!modalLinkClick) {
       return;
@@ -18,7 +16,7 @@ export async function initModal() {
         modal.classList.add("is-open");
         modal.style.animation = "modalFadeIn 1s forwards";
         document.body.style.overflowY = "hidden";
-        backToTop.classList.remove("show-btn");
+        backToTopBtn.classList.remove("show-btn");
       };
 
       modalOpen();
@@ -27,7 +25,7 @@ export async function initModal() {
         modal.classList.remove("is-open");
         modal.removeEventListener("animationend", modalClose);
         document.body.style.overflowY = "scroll";
-        backToTop.classList.add("show-btn");
+        backToTopBtn.classList.add("show-btn");
       };
 
       closeButton.addEventListener("click", () => {

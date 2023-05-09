@@ -1,6 +1,7 @@
+import { backToTopBtn } from "./elements";
+
 export function initBackToTop() {
   const targets = document.querySelectorAll(".button-target");
-  const backToTopBtn = document.querySelector(".back-to-top-btn");
 
   function observerCallback(targets) {
     targets.forEach((target) => {

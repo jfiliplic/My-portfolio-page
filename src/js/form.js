@@ -1,6 +1,6 @@
-export async function initForm() {
-  const msgForm = document.querySelector(`[name="send-msg"]`);
+import { msgForm } from "./elements";
 
+export async function initForm() {
   function handleSubmit(event) {
     event.preventDefault();
     const name = event.currentTarget.name.value;
@@ -11,6 +11,8 @@ export async function initForm() {
       return;
     }
     console.log(name + "\n" + email + "\n" + message);
+    alert("Your message has been send. Want to send another message?");
+    event.currentTarget.reset();
   }
 
   msgForm.addEventListener("submit", handleSubmit);

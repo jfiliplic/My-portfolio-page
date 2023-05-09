@@ -1,21 +1,13 @@
+import { navigationToggle, portfolioContainer, msgForm } from "./elements";
 import { initBackToTop } from "./back-to-top";
 import { initNav } from "./navigation";
 import { initModal } from "./modal";
 import { initForm } from "./form";
 
-const navBtn = document.querySelector(".menu-btn");
-// const modalLinks = document.querySelectorAll(".portfolio-link");
-// console.log(modalLinks);
-const portfolios = document.querySelector(".portfolio-items");
-const form = document.querySelector("form");
+navigationToggle.addEventListener("mouseenter", initNav, { once: true });
 
-navBtn.addEventListener("click", initNav);
+portfolioContainer.addEventListener("mouseenter", initModal, { once: true });
 
-// modalLinks.forEach((modalLink) => {
-//   modalLink.addEventListener("click", initModal);
-// });
-portfolios.addEventListener("mouseenter", initModal);
-
-form.addEventListener("input", initForm);
+msgForm.addEventListener("input", initForm, { once: true });
 
 initBackToTop();
