@@ -1,6 +1,6 @@
 import { backToTopBtn, portfolioContainer } from "./elements";
 
-export async function initModal() {
+export function initModal() {
   portfolioContainer.addEventListener("click", (event) => {
     event.preventDefault();
 

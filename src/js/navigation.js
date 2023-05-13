@@ -1,6 +1,6 @@
 import { navigationToggle } from "./elements";
 
-export async function initNav() {
+export function initNav() {
   const navigation = document.querySelector("nav");
   const welcome = document.querySelector(".welcome");
 

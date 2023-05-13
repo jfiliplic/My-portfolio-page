@@ -1,6 +1,6 @@
 import { msgForm } from "./elements";
 
-export async function initForm() {
+export function initForm() {
   function handleSubmit(event) {
     event.preventDefault();
     const name = event.currentTarget.name.value;
